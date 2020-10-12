@@ -1,6 +1,6 @@
 {
   "name": "get-initials",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "A small typescript package to generate user initials",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
