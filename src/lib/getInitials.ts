@@ -21,7 +21,7 @@ const generate = (name: string, lastName?: string) => {
     lastNameInitial = lastName.substring(0, 1).toUpperCase()
   }
 
-  return `${firstNameInitial ?? ""}${lastNameInitial ?? ""}`
+  return `${firstNameInitial || ""}${lastNameInitial || ""}`
 }
 
 export { generate }
