@@ -13,7 +13,7 @@ const generate = (name: string, lastName?: string) => {
     [firstName, lastName] = name.split(" ")
   }
 
-  let firstNameInitial: string, lastNameInitial: string
+  let firstNameInitial = "", lastNameInitial = ""
   if (firstName) {
     firstNameInitial = firstName.substring(0, 1).toUpperCase()
   }
