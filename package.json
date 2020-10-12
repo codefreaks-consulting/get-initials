@@ -1,13 +1,13 @@
 {
   "name": "get-initials",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A small typescript package to generate user initials",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
   "module": "build/module/index.js",
   "repository": "https://github.com/codefreaks-consulting/get-initials",
   "license": "MIT",
-  "keywords": [],
+  "keywords": ["initials", "user initials", "avatar", "generate initials", "get initials"],
   "author": "Gzim Helshani (gzimh)",
   "scripts": {
     "build": "run-p build:*",
