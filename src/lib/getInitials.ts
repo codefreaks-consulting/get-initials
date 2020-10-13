@@ -6,22 +6,17 @@
  * @returns name initials.
  */
 
-const generate = (name: string, lastName?: string) => {
-  if (!name && !lastName) return null
-  let firstName = name
+const generate = (name: string, lastName?: string): string | null => {
+  if (!name?.trim() && !lastName?.trim()) return null;
+
+  let firstName = name ?? '';
   if (!lastName) {
-    [firstName, lastName] = name.split(" ")
+    [firstName, lastName = ''] = name?.split(' ');
   }
 
-  let firstNameInitial = "", lastNameInitial = ""
-  if (firstName) {
-    firstNameInitial = firstName.substring(0, 1).toUpperCase()
-  }
-  if (lastName) {
-    lastNameInitial = lastName.substring(0, 1).toUpperCase()
-  }
+  return `${firstName.substring(0, 1).toUpperCase()}${lastName
+    .substring(0, 1)
+    .toUpperCase()}`;
+};
 
-  return `${firstNameInitial || ""}${lastNameInitial || ""}`
-}
-
-export { generate }
+export { generate };
