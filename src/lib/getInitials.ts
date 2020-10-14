@@ -7,16 +7,14 @@
  */
 
 const generate = (name: string, lastName?: string): string | null => {
-  if (!name?.trim() && !lastName?.trim()) return null;
+  if (!name?.trim() && !lastName?.trim()) return null
 
-  let firstName = name ?? '';
+  let firstName = name || ""
   if (!lastName) {
-    [firstName, lastName = ''] = name?.split(' ');
+    [firstName, lastName = ""] = name?.split(" ")
   }
 
-  return `${firstName.substring(0, 1).toUpperCase()}${lastName
-    .substring(0, 1)
-    .toUpperCase()}`;
-};
+  return `${firstName.substring(0, 1).toUpperCase()}${lastName.substring(0, 1).toUpperCase()}`
+}
 
-export { generate };
+export { generate }
